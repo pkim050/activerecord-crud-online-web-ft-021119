@@ -71,6 +71,7 @@ def can_be_found_updated_and_saved
   temp = Movie.last
   Movie.update(temp.id, :title => "Even Awesomer Flick")
   Movie.last
+  binding.pry
 end
 
 def can_update_using_update_method
