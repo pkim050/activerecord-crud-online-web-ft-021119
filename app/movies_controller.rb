@@ -70,7 +70,6 @@ def can_be_found_updated_and_saved
   Movie.create(title: "Awesome Flick")
   temp = Movie.last
   Movie.update(temp.id, :title => "Even Awesomer Flick")
-  Movie.save
   Movie.find_by title: "Even Awesomer Flick"
 end
 
