@@ -4,7 +4,7 @@
 # def make_a_new_movie_instance    # def make_a_new_movie_instance
 #   movie = __                     #   movie = Movie.new
 # end                              # end
-
+require 'pry'
 def can_be_instantiated_and_then_saved
   movie = Movie.create
   movie.title = "This is a title."
@@ -23,13 +23,13 @@ def can_be_created_with_a_hash_of_attributes
   movie = Movie.create(attributes)
 end
 
-def can_be_created_in_a_block(args = __)
+def can_be_created_in_a_block(args = nil)
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
 
   Movie.create do |m|
-    __
+    binding.pry
   end
 end
 
